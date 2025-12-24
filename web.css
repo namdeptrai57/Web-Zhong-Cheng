@@ -1,0 +1,8 @@
+<style>
+  body {
+    transition: opacity 0.4s ease;
+  }
+  .fade-out {
+    opacity: 0;
+  }
+</style>
