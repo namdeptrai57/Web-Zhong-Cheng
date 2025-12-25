@@ -34,7 +34,7 @@
 
 <div class="flex flex-1 justify-center">
 <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 w-full">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-border-dark px-4 lg:px-10 py-4">
+<header class="flex flex-wrap items-center justify-between border-b border-solid border-b-border-dark px-4 lg:px-10 py-4">
 <div class="flex items-center gap-3 text-white">
   <div class="size-10 shrink-0">
     <!-- LOGO CŨ -->
@@ -48,15 +48,18 @@
 </div>
 
 
-<div class="hidden lg:flex flex-1 justify-end gap-8">
-<div class="flex items-center gap-9">
-<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#about">About</a>
-<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#products">Products</a>
-<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#contact">Contact</a>
+<!-- Desktop menu -->
+<nav class="hidden lg:flex gap-8 text-white">
+  <a class="hover:text-primary" href="#about">About</a>
+  <a class="hover:text-primary" href="#products">Products</a>
+  <a class="hover:text-primary" href="#contact">Contact</a>
+</nav>
 
-<div class="lg:hidden text-white">
-<span class="material-symbols-outlined">menu</span>
-</div>
+<!-- Mobile menu icon -->
+<button class="lg:hidden text-white">
+  <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+
 </header>
 </div>
 </div>
@@ -68,7 +71,7 @@
 <div class="@[480px]:p-4">
 <div class="flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded items-start justify-center px-4 py-10 @[480px]:px-10 relative overflow-hidden" data-alt="Industrial factory floor with CNC machines in cool blue lighting" style='background-image: linear-gradient(rgba(17, 23, 34, 0.8) 0%, rgba(17, 23, 34, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8EmYYw4Bjw0M8E4jFOXAERQ7Gq3oXbjSVIBP-Hz1hg720izzloqXxN_Ijnu3XqmBj4ECjrHMyU0fc5_j0LFNdT0NVuclWYR-Sc_4ngPcOighJAUp7dt3DhehQKK-El9F5VU-7ytGoqXcrA-kM26L-Iti5kNkdefZxAJvC_AF_rRTilnGfJSXTuEx0HDFIqc6WrA5zFNjfHbgav7XUrTPzPMed93PyAVPwr8KLYUJ8gbu25kCxPe4WyfM8WZOKTElFoRhV9n8FTiq_");'>
 <div class="flex flex-col gap-4 text-left max-w-[720px] relative z-10">
-<h1 class="text-white text-5xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
+<h1 class="text-white text-3xl sm:text-4xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
                                     Precision Engineering for Industrial Excellence
                                 </h1>
 <h2 class="text-slate-300 text-base font-normal leading-normal @[480px]:text-lg max-w-[600px]">
@@ -240,7 +243,7 @@
 </div>
 </div>
 </section>
-<section class="py-16 px-4 md:px-10 lg:px-40 max-w-[1440px] mx-auto" id="partners">
+<section class="py-16 px-4 sm:px-6 lg:px-20 max-w-[1440px] mx-auto" id="partners">
 <div class="flex flex-col gap-12 items-center">
 <h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight text-center">Featured Partners</h2>
 <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-12 gap-x-8 items-center justify-items-center opacity-80 transition-all duration-500">
@@ -351,7 +354,7 @@
 </div>
 </div>
 </div>
-<div class="w-full lg:w-7/12 min-h-[400px] lg:min-h-auto bg-[#1e2736] relative group">
+<div class="w-full lg:w-7/12 h-[280px] lg:h-auto bg-[#1e2736] relative group">
 <div class="w-full h-full bg-cover bg-center absolute inset-0 grayscale opacity-80 mix-blend-luminosity" data-alt="Map showing location of Zhong Cheng Engineering in Hai Phong Vietnam" data-location="Hai Phong, Vietnam" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAacJhMwUT5Ly3iS7wuHHEzRFIyk4-awZ4KZ1PykV-hX0iJR2n30QHPxgTMWdZ80VVgfwQlfLrh9QgTJoPMUE_o_vppvnHc9esud_LMBLvgqvKOMdba8I6gFITIOr7V5ZoASKW_XbDg698lTH-kCpIw2ee_pYHGswFGa5GHhftOv6eFS3JBDkzbTL70cSxX8dCWGHwXizrReta_QmDyJgj0YOdtvoRMIdm-UWbKKn7ZfsczMHgmcEz5PivLrW_k_ZfcIwKTzB45IAXE");'>
 </div>
 <div class="absolute inset-0 bg-[#0b0f17]/30"></div>
