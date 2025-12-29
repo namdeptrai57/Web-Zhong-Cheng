@@ -7,7 +7,29 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="./css/animation.css" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<style type="text/tailwindcss">
+    @layer utilities {
+        /* Bạn viết code dùng @apply tại đây */
+        .logo-ticker-image {
+            @apply w-auto h-7 lg:h-9 object-contain self-center hover:grayscale-0 transition-all duration-300 hover:scale-105 cursor-pointer;
+        }
+    }
+</style>
+
+<!--jQuery-->
+<script 
+src="https://code.jquery.com/jquery-3.7.1.min.js"
+ defer>
+  
+</script>
+
+<script defer type="module" src="./jv/main.js">
+
+</script>
+
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -30,7 +52,7 @@
         }
     </script>
 </head>
-<body class="bg-background-dark text-white overflow-x-hidden">
+<body class="bg-background-dark text-white">
 
 
 <div class="flex flex-1 justify-center">
@@ -41,7 +63,7 @@
 
     <!-- Logo -->
     <div class="flex items-center gap-3 min-w-0">
-      <div class="size-10 shrink-0 bg-white/10 rounded"></div>
+      <img src="./assets/logo.png" alt="Zhong Cheng Logo" class="size-10 shrink-0 object-contain rounded">
       <div class="min-w-0">
         <h2 class="text-lg font-bold truncate">众城精工</h2>
         <p class="text-[10px] text-white/70 truncate">
@@ -58,12 +80,23 @@
     </nav>
 
     <!-- Mobile icon -->
-    <button class="lg:hidden shrink-0">
-      <span class="material-symbols-outlined text-3xl">menu</span>
-    </button>
+    <div class="lg:hidden relative">
+      <button id="menuBtn" class="z-[999] relative">
+        <span class="material-symbols-outlined text-3xl text-white">
+          menu
+        </span>
+      </button>
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobileMenu" class="absolute right-0 top-full mt-2 w-48 bg-surface-dark border border-border-dark rounded-lg shadow-xl hidden z-[1000]">
+        <div class="flex flex-col py-2 text-white text-sm font-medium">
+          <a href="#about" class="block px-4 py-2 hover:bg-white/5 hover:text-primary">About</a>
+          <a href="#products" class="block px-4 py-2 hover:bg-white/5 hover:text-primary">Products</a>
+          <a href="#contact" class="block px-4 py-2 hover:bg-white/5 hover:text-primary">Contact</a>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
-</div>
 </div>
 </div>
 <div class="layout-container flex flex-col">
@@ -100,7 +133,8 @@
 <div class="@container">
 <div class="flex flex-col gap-10 lg:flex-row items-center">
 <div class="w-full lg:w-1/2">
-<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg relative overflow-hidden shadow-2xl shadow-black/50" data-alt="Close up of a high precision milling bit on a CNC machine" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCm401ZhVL-WFCX6Hlk2cSiMZBzC7wZVifZoRlqUdVHQp0ulgo0lOUq3S2CQ6KiO2Q1uxrlg6srZHtK2NBn2Xp0Ng9wCSBSK3VruXExTARkZ80o8CxU8w-CUFmIupe0kqVVm-AOaHBlEHRO6n9OqeXi9gnyWEG8hDYybWWCd83aqGm97_zCZWKJ0dxU-ySh4NeX4J9pOUz3DGHzk_kg8oZ7GbfJNdiTEaXhztRLlr4Miyj8OajzSbwuG5oG6Ta7-017B-bWHczXjT6l");'>
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg relative overflow-hidden shadow-2xl shadow-black/50" data-alt="Close up of a high precision milling bit on a CNC machine" style="background-image: url('./images/automotive-piping.png');"
+>
 <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay"></div>
 </div>
 </div>
@@ -150,7 +184,7 @@
 <div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary mb-2">
 <span class="material-symbols-outlined">construction</span>
 </div>
-<h3 class="text-white text-lg font-bold"><a href="Fixturecase.html" >Fixture Case</a></h3>
+<h3 class="text-white text-lg font-bold"><a href="Fixturecase.html" class="text-white hover:text-primary transition-colors">Fixture Case</a></h3>
 <p class="text-slate-400 text-sm leading-relaxed">
                                 Custom-designed fixtures ensuring precision, stability, and repeatability during complex manufacturing.
                             </p>
@@ -164,7 +198,7 @@
 <div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary mb-2">
 <span class="material-symbols-outlined">smart_toy</span>
 </div>
-<h3 class="text-white text-lg font-bold"><a href="RobotApplication.html#">Robot Application</a></h3>
+<h3 class="text-white text-lg font-bold"><a href="RobotApplication.html#" class="text-white hover:text-primary transition-colors">Robot Application</a></h3>
 <p class="text-slate-400 text-sm leading-relaxed">
                                 Advanced robotic automation solutions designed to enhance efficiency and production consistency.
                             </p>
@@ -178,7 +212,7 @@
 <div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary mb-2">
 <span class="material-symbols-outlined">shelves</span>
 </div>
-<h3 class="text-white text-lg font-bold"><a href="Storageshelf.html">Storage Shelf</a></h3>
+<h3 class="text-white text-lg font-bold"><a href="Storageshelf.html" class="text-white hover:text-primary transition-colors">Storage Shelf</a></h3>
 <p class="text-slate-400 text-sm leading-relaxed">
                                 Durable industrial storage systems for organized, safe, and efficient material handling in warehouses.
                             </p>
@@ -192,7 +226,7 @@
 <div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary mb-2">
 <span class="material-symbols-outlined">dashboard</span>
 </div>
-<h3 class="text-white text-lg font-bold"><a href="SheetMetalPart1.html">Sheet Metal Part</a></h3>
+<h3 class="text-white text-lg font-bold"><a href="SheetMetalPart1.html" class="text-white hover:text-primary transition-colors">Sheet Metal Part</a></h3>
 <p class="text-slate-400 text-sm leading-relaxed">
                                 High-quality sheet metal fabrication, cutting, bending, and assembly for diverse industrial needs.
                             </p>
@@ -206,7 +240,7 @@
 <div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary mb-2">
 <span class="material-symbols-outlined">precision_manufacturing</span>
 </div>
-<h3 class="text-white text-lg font-bold"><a href="PrecisionMachinedParts1.html">Precision Machined Parts</a></h3>
+<h3 class="text-white text-lg font-bold"><a href="PrecisionMachinedParts1.html" class="text-white hover:text-primary transition-colors">Precision Machined Parts</a></h3>
 <p class="text-slate-400 text-sm leading-relaxed">
                                 Complex components manufactured with extreme accuracy and tight tolerances using CNC technology.
                             </p>
@@ -220,7 +254,7 @@
 <div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary mb-2">
 <span class="material-symbols-outlined">directions_car</span>
 </div>
-<h3 class="text-white text-lg font-bold">Automotive Production Line</h3>
+<h3 class="text-white text-lg font-bold" ><a href="AutomotivePipingProductionLine.html" class="text-white hover:text-primary transition-colors">Automotive Production Line</a></h3>
 <p class="text-slate-400 text-sm leading-relaxed">
                                 Complete assembly line solutions and components tailored for the automotive manufacturing sector.
                             </p>
@@ -234,7 +268,7 @@
 <div class="size-10 rounded bg-primary/10 flex items-center justify-center text-primary mb-2">
 <span class="material-symbols-outlined">display_settings</span>
 </div>
-<h3 class="text-white text-lg font-bold">Product Equipment Display</h3>
+<h3 class="text-white text-lg font-bold"><a href=" " class="text-white hover:text-primary transition-colors">Product Equipment Display</a></h3>
 <p class="text-slate-400 text-sm leading-relaxed">
                                 Specialized display equipment and rugged stands designed for showcasing industrial products.
                             </p>
@@ -245,75 +279,21 @@
 </div>
 </div>
 </section>
-<section class="py-16 px-4 sm:px-6 lg:px-20 max-w-[1440px] mx-auto" id="partners">
-<div class="flex flex-col gap-12 items-center">
+<!--partnerLogos-->
+<section id="partner-Logos" class="py-16">
+  <div class="container mx-auto">
+  <!--heading-->
 <h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight text-center">Featured Partners</h2>
-<div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-12 gap-x-8 items-center justify-items-center opacity-80 transition-all duration-500">
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-bold text-2xl text-[#111418] dark:text-white">wistron</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-bold text-2xl text-[#111418] dark:text-white tracking-widest">PEGATRON</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-extrabold text-3xl text-[#002e6d] dark:text-white">ESON</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-bold text-3xl italic font-serif text-[#111418] dark:text-white">Career</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 gap-1">
-<span class="material-symbols-outlined text-orange-500">sunny</span>
-<span class="font-bold text-lg text-[#111418] dark:text-white leading-none">CanadianSolar</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-black text-3xl text-[#0055a4] dark:text-white italic">EVA</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 flex-col">
-<span class="material-symbols-outlined text-yellow-500 text-3xl">light_mode</span>
-<span class="font-bold text-xs text-center text-[#111418] dark:text-white mt-1">Providence Enterprise</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-bold text-3xl text-[#005f9e] dark:text-white">Qisda</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-bold text-2xl text-[#009a93] dark:text-white">Hisense</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 gap-1">
-<span class="material-symbols-outlined text-red-600">grid_view</span>
-<span class="font-black text-xl italic text-gray-700 dark:text-white">ASKEY</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-black text-3xl text-[#00539b] dark:text-white tracking-tighter">ASUS</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-black text-3xl text-[#003366] dark:text-white">FGC</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-serif font-bold text-3xl text-[#003087] dark:text-white">S-TS</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 gap-1">
-<span class="material-symbols-outlined text-blue-700">radio_button_checked</span>
-<div class="flex flex-col leading-none">
-<span class="font-bold text-xs">HONOTO</span>
-</div>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 gap-1">
-<span class="material-symbols-outlined text-blue-400">filter_vintage</span>
-<span class="font-bold text-xl text-[#0085ca] dark:text-white">SANHUA</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-bold text-2xl text-[#00863f] dark:text-white">FLEX<span class="text-orange-500 italic">ium</span></span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105 flex-col">
-<span class="material-symbols-outlined text-green-600 text-3xl">eco</span>
-<span class="font-bold text-sm text-[#111418] dark:text-white uppercase">COMPAL</span>
-</div>
-<div class="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105">
-<span class="font-black text-2xl italic text-[#005eb8] dark:text-white">CHILISIN</span>
-</div>
-</div>
-</div>
+  <!--Logos-->
+  <div class="flex mt-9 md:mt-16 [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+    <div id="partner-logo-list" class="flex flex-none logos-wrapper gap-14 pl-14">
+
+    </div>
+  </div>
+  </div>
+  
 </section>
+<!--about us-->
 <div class="layout-container flex flex-col bg-[#0b0f17] border-t border-border-dark" id="contact">
 <div class="flex flex-1 justify-center">
 <div class="layout-content-container flex flex-col lg:flex-row max-w-[1200px] flex-1 w-full">
@@ -341,7 +321,7 @@
 </div>
 <div>
 <p class="text-sm text-slate-400 font-medium mb-1">Email Us</p>
-<a class="text-white hover:text-primary transition-colors" href="mailto:chensheng@vnzhongcheng.com">chensheng@vnzhongcheng.com</a>
+<a class="text-white hover:text-primary transition-colors" href="mailto:chensheng@vnzhongcheng.com" >chensheng@vnzhongcheng.com</a>
 </div>
 </div>
 <div class="flex gap-4 items-start">
@@ -350,8 +330,8 @@
 </div>
 <div>
 <p class="text-sm text-slate-400 font-medium mb-1">Phone</p>
-<p class="text-white"> 135 372 42687</p>
-<p class="text-white"> 0915 686 902</p>
+<p class="text-white"> <a href="135 372 42687" class="whitespace-nowrap hover:text-primary">135 372 42687</a></p>
+<p class="text-white"> <a href="0915 686 902" class="whitespace-nowrap hover:text-primary">0915 686 902</a></p>
 </div>
 </div>
 </div>
@@ -384,21 +364,12 @@
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
 <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
 <div class="flex items-center gap-2 text-white">
-<div class="size-6 text-primary">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_6_331)">
-<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
-</g>
-<defs>
-<clipPath id="clip0_6_331"><rect fill="white" height="48" width="48"></rect></clipPath>
-</defs>
-</svg>
-</div>
+<img src="./assets/logo.png" alt="Zhong Cheng Logo" class="size-10 shrink-0 object-contain rounded">
 <span class="font-bold tracking-tight">Zhong Cheng</span>
 </div>
 <p class="text-text-secondary-dark text-sm leading-relaxed">Precision Engineering for the modern industrial world. ISO 9001:2015 Certified.</p>
 </div>
-<div class="flex flex-col gap-3">
+<div class="hidden md:flex flex-col gap-3">
 
 <!--contact-->
 </div>
@@ -408,15 +379,20 @@
 </div>
 <div class="flex flex-col gap-3">
 <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contact</h4>
+<div class="flex items-center gap-4 text-white">
+  <span class="material-symbols-outlined text-lg shrink-0">
+    mail
+  </span>
 <a
-  class="flex items-center gap-2 text-text-secondary-dark hover:text-white transition-colors"
   href="mailto:chensheng@vnzhongsheng.com"
+  class="group flex items-center gap-2 transition-colors hover:text-primary"
 >
-  <span class="material-symbols-outlined text-lg">mail</span>
-  <p class="text-text-secondary-dark text-sm">
+  <p class="text-sm">
     chensheng@vnzhongsheng.com
   </p>
 </a>
+</div>
+
 <!--SỐ điện thoại-->
 <div class="flex items-center gap-4 text-white">
   <span class="material-symbols-outlined text-lg shrink-0">
@@ -449,5 +425,24 @@
 </div>
 </footer>
 </div>
-<script src="./js/main.js"></script>
-</body></html>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = menuBtn.querySelector('span');
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+    mobileMenu.classList.toggle('hidden');
+    menuIcon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+  });
+
+  // Đóng menu khi click ra ngoài
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+      menuIcon.textContent = 'menu';
+    }
+  });
+</script>
+</body>
+</html>
