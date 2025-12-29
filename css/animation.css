@@ -1,0 +1,22 @@
+.logos-wrapper{
+    animation:moveLeft 20s linear infinite;
+    -webkit-animation: moveLeft 20s linear infinite;
+}
+@keyframes moveLeft {
+    0%{
+        transform:translate(0);
+    }
+    100%{
+        transform:translate(-50%);
+    }
+    
+}
+@-webkit-keyframes moveLeft {
+    0%{
+        transform:translate(0);
+    }
+    100%{
+        transform:translate(-50%);
+    }
+    
+}
